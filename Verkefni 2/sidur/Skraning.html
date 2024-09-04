@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="is">
+  <head>
+    <meta charset="utf-8" />
+    <title>Skráning</title>
+  </head>
+  <body>
+    <header>
+        <h1>Skráning á viðburð</h1>
+        <a href="#efni" class="skip">Beint í efni</a>
+    </header>
+    <p><a href = "../index.html">Forsíða Spilabúðarinnar</a></p>
+        <p><a href = "spil.html">Spil</a></p>
+        <p><a href = "vidburdir.html">Viðburðir</a></p>
+        <p><a href = "Skraning.html">Skráning á viðburði</a></p>
+
+        <main id="efni">
+    
+        <p>Skráðu þig á viðburði hjá okkur!</p>
+
+        <form>
+            <fieldset>
+                <legend>Viðburður</legend>
+                <label>
+                    Hvaða viðburð viltu koma á?
+                    <select id="Viðburðar skráning">
+                        <option value="0">Brass</option>
+                        <option value="1">Púslukvöld</option>
+                        <option value="2">Ticket to ride</option>
+                    </select>
+                </label>
+
+               
+                <label> Hvenær? <input type="date" required></label>
+
+
+                <label>
+                    Hvenær? frá <input type="time" min="10:00" max="00:00" required> til <input type="time" min="10:00"
+                        max="00:00" required>
+                </label>
+
+                <label>
+                    Hversu mörg?
+                    <select id="fjoldi">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </label>
+
+                <label>
+                    Viltu taka eitthvað fram? <textarea></textarea>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Panta mat</legend>
+                <label>Viltu einhvern mat?
+                    <select id="Matur">
+                        <option value="0">Pizzusneið og gos</option>
+                        <option value="1">Kaffi og kaka</option>
+                        <option value="2">Engan mat</option>
+                    </select>
+                </label>
+                <label>Ofnæmi? <input type="checkbox"></label>
+                <label>Annað sem við eigum að vita? <textarea></textarea></label>
+            </fieldset>
+            <fieldset>
+                <legend>Þínar upplýsingar</legend>
+                <label>Nafn: <input type="text" id="Nafn" placeholder="Nafn" required></label>
+                <label>Netfang: <input type="text" id="email" placeholder="haskoli@email.com" required></label>
+                <label>Símanúmer: <input type="text" id="simanumer" placeholder="5812345" required></label>
+                
+            </fieldset>
+            <fieldset>
+                <legend>Samþykkja og panta</legend>
+                <label>Ég samþykki skilmála Spilabúðarinnar <input type="checkbox"></label>
+                <label>Panta</label><input type="submit">
+            </fieldset>
+
+        <a href="../index.html">Aftur á forsíðu</a>
+
+  </body>
+  <footer> 
+    <h2>Opnunartími</h2>
+    <p>Mánudagar Lokað Þriðjudagar til fimmtudags 14:00–22:00 Föstudaga 14:00–00:00 Laugardaga 12:00–00:00 Sunnudaga 12:00–22:00</p>
+    <h2>Hér erum við</h2>
+    <p>Spilabúðin ehf. Spilgata 1 101 Reykjavík Sími 123-4567 <a href="mailto:spilabudin@example.org">spilabudin@example.org</a></p>
+    <h2>Samfélagsmiðlar</h2>
+    <p><a href="https://www.facebook.com/HaskoliIslands">Facebook</a></p>
+    <p><a href="https://www.youtube.com/@HIvarp">Youtube</a></p>
+    <p><a href="https://www.instagram.com/haskoli_islands/">Instagram</a></p>
+</footer>
+</html>
