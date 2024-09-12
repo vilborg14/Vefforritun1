@@ -1,0 +1,281 @@
+/* Setjum inn „reset“ sem fjarlægir margin og padding af öllu */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Reiknum stærð á öllum boxum sem border-box */
+html {
+  box-sizing: border-box;
+}
+/* og látum erfast á allt */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* hjálpar class sem felur sjónrænt en skjálesarar lesa */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Almennt */
+
+/** Letur og stærðir **/
+
+/*** Grunnstærð er 16px ***/
+html {
+  font-size: 16px;
+}
+
+/*** Leturgerðir sem við sækjum úr fonts/ möppu ***/
+@font-face {
+  font-family: 'Matemasie';
+  src: url('./fonts/Matemasie-Regular.ttf') format('woff2')
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./fonts/OpenSans-VariableFont_wdth\,wght.ttf') format('woff2');
+  
+}
+
+@font-face {
+  font-family: "Open-sans-bold";
+  src:url('./fonts/OpenSans-VariableFont_wdth\,wght.ttf') format('woff2');
+  font-weight:bold;
+}
+
+/*** Allt meginmál notar open sans ***/
+html,
+input,
+select,
+button {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+/*** Allar fyrirsagnir nota Matemasie regular ***/
+h1,
+h2,
+h3,
+legend {
+  font-family: 'Matemasie';
+  margin-bottom: 0.5rem;
+}
+
+/** Lætur myndir aldrei taka meira pláss en foreldri skilgreinir **/
+img {
+  max-width: 100%;
+}
+
+/** Litur á hlekkjum erfist frá foreldri **/
+a {
+  color: inherit;
+}
+
+/**
+ * Eftirfarandi setur upp grunn umbrot (layout) síðu með flexbox.
+ * Við förum yfir flexbox í viku 4 en þangað til er hægt að nota þetta
+ * sem grunn og án breytinga.
+ * Athugið að til þess að þetta virki þar að setja <div class="wrapper"> utan um allt efni 
+ * innan <body>.
+ */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: #f3dd99;
+}
+
+.wrapper main {
+  flex: 1;
+}
+
+/* Það sem fylgir er tillaga að uppbyggingu á selectorum fyrir verkefnið */
+
+/** Haus á síðum **/
+
+header {
+  padding: 1rem;
+  text-align: center;
+  background-color: #cc99bb;
+}
+
+/** Valmynd **/
+
+nav {
+  padding: 1rem;
+  background-color: #eebbdd;
+  border-bottom: 4px solid #cc99bb;
+}
+
+/* TODO Skilgreina aðra selectora fyrir valmynd */
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+nav ul li :last-child{
+margin-right: 0;
+}
+
+.valin {
+  font-family: Open-sans-bold;
+}
+
+/** Meginmál og efni forsíðu **/
+
+main {
+  padding: 1rem;
+  display: block;
+  margin: 1rem 3rem 1rem 3rem;
+  align-content: center;
+  max-width: 900px;
+}
+
+.main-image{
+  float: right;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  max-width: 40%;
+  min-width: 14rem;
+}
+
+form, img, p {
+  margin-bottom: 1rem;
+}
+
+img{
+  max-width: 100%;
+  border-radius: 5px;
+  border: 5px;
+}
+
+
+
+
+/** Skráningarform**/
+button{
+  border-radius: 5px;
+  padding: 1 rem;
+  border:#eebbdd;
+  background-color: #eebbdd;
+}
+
+fieldset{
+  margin-bottom: 1rem;
+  border: none;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="datetime-local"],
+select,
+textarea,
+
+label {
+
+  display: block;
+  width: 20rem;
+  max-width: 20rem;
+  min-height: 1rem;
+  border-radius: 0%;
+}
+
+label{margin-top: 1rem;}
+input[type="checkbox"]{
+  margin-right: 1rem;
+  border-radius: 0%;
+  display: inline-block;
+}
+
+/*Spilasíðan*/
+table {
+  border-radius: 5px;
+  text-align: left;
+  max-width: 100%;
+  border-spacing: 0;
+}
+
+tr:nth-child(odd){
+  background-color: #eebbdd;
+}
+tr td,
+th{
+  padding: 1rem;
+}
+
+table img{
+  min-width: 6rem;
+  margin-bottom: 0;
+}
+
+/**Viðburðir**/
+.event{
+  margin-bottom: 5rem;
+  padding: 1rem;
+  overflow: hidden;
+  
+}
+
+.event link{
+  clear: left;
+}
+
+.event img{
+  margin-right: 1rem;
+  border-radius: 10px;
+  float: left;
+  width: 30%;
+}
+
+
+/** Fótur **/
+
+footer {
+  padding: 1rem;
+  background-color: #eebbdd;
+  border-top: 4px solid #cc99bb;
+  text-align: center;
+
+}
+
+/* Ef við notum section fyrir hvert svæði undir fót, þá er hægt að nota eftirfarandi */
+footer > section {
+  display: inline-block;
+  /* Lætur efni byrja efst í línu, almennt myndum við nota flexbox hér! */
+  vertical-align: top;
+  text-align: left;
+
+}
+footer h2 {
+  margin-bottom: 1rem;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer dl dt {
+  font-weight: bold;
+}
+footer dl dd {
+margin-bottom: calc(1rem);
+}
+
+
+
