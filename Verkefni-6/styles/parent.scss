@@ -1,0 +1,14 @@
+/** Lætur myndir aldrei taka meira pláss en foreldri skilgreinir **/
+img {
+  max-width: 100%;
+}
+
+/** Litur á hlekkjum erfist frá foreldri **/
+a {
+  color: inherit;
+}
+
+/** „Til baka á forsíðu“ hlekkur **/
+.back {
+  margin-top: var(--spacing);
+}

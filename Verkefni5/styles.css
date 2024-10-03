@@ -231,8 +231,6 @@ frá 800 fer nav í frá toppi til vinstir*/
   .card{
     grid-column: span 6;
   }
-  
-  
 
   footer > section {
     grid-column: span 4;
